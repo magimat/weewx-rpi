@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - html-volume:/usr/share/nginx/html
+  weewx:
+    image: magimat/weewx-rpi
+    volumes:
+      - html-volume:/home/weewx/public_html
+
+volumes:
+    html-volume:
