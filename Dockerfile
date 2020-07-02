@@ -62,7 +62,7 @@ RUN ./bin/wee_extension --install=/neowx-latest.zip
 COPY skins/weewx-belchertown-development.zip /weewx-belchertown-development.zip
 RUN ./bin/wee_extension --install=/weewx-belchertown-development.zip
 
-RUN wget -O weewx-sdr.zip https://github.com/matthewwall/weewx-sdr/archive/master.zip
+RUN wget -O weewx-sdr.zip https://github.com/magimat/weewx-sdr/archive/master.zip
 RUN ./bin/wee_extension --install weewx-sdr.zip
 RUN ./bin/wee_config --reconfigure --driver=user.sdr --no-prompt
 
